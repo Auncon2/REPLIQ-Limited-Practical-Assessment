@@ -1,29 +1,41 @@
 # Recipe App
 
-# Description:
+📄 Documentation
+✅ Features Implemented
+Authentication (Login/Signup/Logout)
+Users can register, login, and logout. Auth state is managed using Redux Toolkit and synced with localStorage.
 
-- You are provided with an incomplete Recipe App project that uses the free MealDB API to retrieve recipe data. The app needs to showcase some recipes and allows users to add them to a cart. Functionalities after carting is not required for the current MVP. The home page includes a banner section, a top recipes section, and a search option to find recipes by name or ingredients.
+Responsive Navbar
+Fully responsive navigation with mobile support and automatic menu toggle handling.
 
-# Required New Features:
+All Recipes Page
+Displays all available recipes fetched via RTK Query.
 
-- Basic Authentication: Implement an authentication flow using name, email, phone, and a password.
-- All Recipes Page: Create a page where users can view all recipes.
-- Add Recipe to Cart: Allow users to add recipes to a cart. The cart should store data locally if the user is not logged in, and save it to the user’s account if they are logged in.
-- Bug Fixes: There are at least three, or more features that are currently not working properly. Identify and fix these bugs.
+Cart and Wishlist
+Users can manage cart and wishlist items. Supports both guest and logged-in states.
 
-# Additional Requirements:
+Recipe Upload Form
+Multi-step recipe submission form with image preview and validation.
 
-- Consistent Design Style: Ensure that any new features match the design style of the existing application. Follow basic accessibility standards.
-- Mobile Responsiveness: Make all pages responsive for mobile devices.
+RTK Query Integration
+Converted all Axios API requests into RTK Query for simplified data fetching, caching, and performance benefits.
 
-# Documentation Requirements:
+Custom Pagination
+Recipes are paginated manually for better UX on large datasets.
 
-- After completion, document under the README section.
-- Features Implemented: Describe the new features you added, in both technical and non-technical terms.
-- Bug Fixes: Briefly list the bugs you identified and fixed.
-- Time Estimate: Indicate the total time spent on the assessment.
+🐛 Bug Fixes
+Modal Close Button Not Working
+Fixed issue where the close button on the modal was non-functional.
 
-# N.B. Documentation should be brief and short, no need to go overboard with it.
+Children Not Rendering in Modal
+Resolved problem where modal content (children) was not properly rendering due to incorrect placement in the component tree.
+
+Navbar Not Closing on Mobile After Link Click
+Fixed by programmatically unchecking the mobile nav toggle checkbox after a link is clicked.
+
+⏱ Time Estimate
+Total time spent: ~15–18 hours
+
 
 # Submission Guidelines:
 
