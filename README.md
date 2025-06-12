@@ -16,6 +16,9 @@ Users can view all items they have added to the cart only when they are logged i
 ### Wishlist
 Users can view all items they have added to the wishlist, even when not logged in. They can also remove items from the cart
 
+### Search Function
+Users can search by **name**, **category**, or **ingredient**. Data fetching is handled using RTK Query, and the same endpoint is used for filtering with a dynamic URL.
+
 ### Recipe Upload Form
 Multi-step recipe submission form with image preview and review. All the recipe information is stored in localStorage.
 
