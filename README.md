@@ -1,34 +1,49 @@
 # Recipe App
 
-# Description:
+# 📄 Documentation
 
-- You are provided with an incomplete Recipe App project that uses the free MealDB API to retrieve recipe data. The app needs to showcase some recipes and allows users to add them to a cart. Functionalities after carting is not required for the current MVP. The home page includes a banner section, a top recipes section, and a search option to find recipes by name or ingredients.
+## ✅ Features Implemented
 
-# Required New Features:
+### Authentication (Login/Signup/Logout)
+Users can create an account, log in, and securely log out. Authentication state is managed using **localStorage** for session persistence.
 
-- Basic Authentication: Implement an authentication flow using name, email, phone, and a password.
-- All Recipes Page: Create a page where users can view all recipes.
-- Add Recipe to Cart: Allow users to add recipes to a cart. The cart should store data locally if the user is not logged in, and save it to the user’s account if they are logged in.
-- Bug Fixes: There are at least three, or more features that are currently not working properly. Identify and fix these bugs.
+### All Recipes Page
+Displays all available recipes fetched via **RTK Query**. Users can add recipes to the cart or wishlist from this page.
 
-# Additional Requirements:
+### Cartlist 
+Users can view all items they have added to the cart only when they are logged in. They can also remove items from the cart list.
 
-- Consistent Design Style: Ensure that any new features match the design style of the existing application. Follow basic accessibility standards.
-- Mobile Responsiveness: Make all pages responsive for mobile devices.
+### Wishlist
+Users can view all items they have added to the wishlist, even when not logged in. They can also remove items from the cart
 
-# Documentation Requirements:
+### Recipe Upload Form
+Multi-step recipe submission form with image preview and review. All the recipe information is stored in localStorage.
 
-- After completion, document under the README section.
-- Features Implemented: Describe the new features you added, in both technical and non-technical terms.
-- Bug Fixes: Briefly list the bugs you identified and fixed.
-- Time Estimate: Indicate the total time spent on the assessment.
+### RTK Query Integration
+Converted all **Axios** API requests into **RTK Query** for simplified data fetching, caching, and performance benefits.
 
-# N.B. Documentation should be brief and short, no need to go overboard with it.
+### Custom Pagination
+Recipes are paginated manually for better UX on large datasets.
 
-# Submission Guidelines:
+---
 
-- Clone or ZIP Download the existing GitHub Code repository: https://github.com/khalek-repliq/frontend-assessment
-- Get rid of the .git folder from the project.
-- Make your necessary changes and upload your new project into your personal GitHub account as a public repository
-- Host your final version on Vercel, Netlify, Firebase or similar platform and prepare your live link.
-- You must submit your "GitHub Link" & "Live Link"
+## 🐛 Bug Fixes
+
+### Modal Close Button Not Working
+Fixed issue where the close button on the modal was non-functional.
+
+### Children Not Rendering in Modal
+Resolved problem where modal content (`children`) was not properly rendering due to incorrect placement in the component tree.
+
+### Navbar Not Closing on Mobile After Link Click
+Fixed by programmatically unchecking the mobile nav toggle checkbox after a link is clicked.
+
+---
+
+## ⏱ Time Estimate
+
+**Total time spent:** ~12-15 hours
+
+
+
+
