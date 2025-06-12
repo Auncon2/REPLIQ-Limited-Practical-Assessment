@@ -3,8 +3,14 @@ import { baseApi } from "@/Auth/baseApi";
 export const recipeApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getTopRecipes: build.query({
-      query: () => `/filter.php?a=American`,
-      // transformResponse: (response) => response.meals?.slice(0, 12) || [],
+      // query: () => `/filter.php?a=American`,
+      query: (filters) => {
+        if (filters?.name) return `/search.php?s=${filters.name}`;
+        if (filters?.category) return `/filter.php?c=${filters.category}`;
+        if (filters?.ingredient) return `/filter.php?i=${filters.ingredient}`;
+
+        return `/filter.php?a=American`; // default
+      },
       transformResponse: (response) => response.meals || [],
     }),
 
